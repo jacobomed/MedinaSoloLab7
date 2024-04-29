@@ -394,8 +394,8 @@ public class SpaceGame extends JFrame implements KeyListener {
                     powerups.remove(i);
                     health += 2;
                     healthLabel.setText("Health: " + health);
-                    activateShield(1000); // Example: Activating shield on collision with power-up
-                    break; // Exit loop after handling collision with one power-up
+                    activateShield(1000); //
+                    break;
                 }
             }
 
@@ -448,7 +448,7 @@ public class SpaceGame extends JFrame implements KeyListener {
 private void activateShield(int shieldDuration) {
 
     /**
-     *activates shield. DOesn't work after level 2 due to challenge level. regular shield only remains active
+     *activates shield. Doesn't work after level 2 due to challenge level. regular shield only remains active
      * for 5 seconds
      */
         if (level < 3) {
@@ -567,8 +567,8 @@ public void challengeLevel() {
      */
 
         if (level > 2) {
-            obstacleSpeed = 40; // Increase obstacle speed
-            if (Math.random() < 1) { // Increase obstacle generation frequency
+            obstacleSpeed = 15; // Increase obstacle speed
+            if (Math.random() < 1) {
                 int obstacleX = (int) (Math.random() * (WIDTH - OBSTACLE_WIDTH));
                 obstacles.add(new Point(obstacleX, 0));
             }
